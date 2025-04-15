@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pomodoro Timer First Brainstorm - Meeting Minutes</title>
+  <meta name="description" content="Meeting minutes for Pomodoro Timer brainstorming session." />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#attendance">Attendance</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+      <li><a href="#comments">Comments</a></li>
+      <li><a href="#recordings">Recordings</a></li>
+      <li><a href="#form">Feedback Form</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Pomodoro Timer First Brainstorm</h1>
+    <h2>Team Sync - Brainstorming Session</h2>
+    <p><strong>Date:</strong> April 14, 2025</p>
+  </header>
+
+  <main>
+    <section id="attendance">
+      <h3>Attendance</h3>
+      <ul>
+        <li>Alex </li>
+        <li>Samira </li>
+        <li>Utkarsh </li>
+        <li>Chris </li>
+      </ul>
+    </section>
+
+    <section id="agenda">
+      <h3>Agenda</h3>
+      <ol>
+        <li>Introduce the Pomodoro Timer Project</li>
+        <li>Identify <b>key features</b></li>
+        <li>Discuss <i>technical approach</i></li>
+        <li>Assign initial tasks</li>
+      </ol>
+    </section>
+
+    <section>
+      <h3>Unfinished Business</h3>
+      <p>None — this was our <em>first</em> team meeting.</p>
+    </section>
+
+    <section>
+      <h3>New Business</h3>
+      <p>The team discussed the need for a <span>minimal and distraction-free interface</span>.</p>
+    </section>
+
+    <section id="comments">
+      <h3>Comments & Concerns</h3>
+      <ul>
+        <li><b>Samira:</b> Is the timer customizable for different durations?</li>
+        <li><b>Chris:</b> How will we store user sessions?</li>
+        <li><b>Utkarsh:</b> Should we include a leaderboard feature?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Whiteboard Diagram</h3>
+      <img src="whiteboard.jpg" alt="Team's UI wireframe sketch" width="800" height="300" />
+    </section>
+
+    <section id="recordings">
+      <h3>Audio Recording</h3>
+      <audio controls>
+        <source src="audio.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Video Recording</h3>
+      <video width="320" height="240" controls>
+        <source src="speech.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <hr />
+
+    <section>
+      <h3>Quick Recap</h3>
+      <details>
+        <summary>Click to view summary</summary>
+        <p>The team aligned on building a Pomodoro app with session tracking, clean UI, and user customization. <a href="https://www.freecodecamp.org/news/html-basics-for-beginners" target="_blank">Follow-up resources here</a>.</p>
+      </details>
+    </section>
+
+    <div>
+      <p>Task ownership was discussed. <span>Samira</span> will handle UI sketches, <span>Utkarsh</span> will lead backend setup.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p><em>Meeting minutes written by Utkarsh Mehta.</em></p>
+  </footer>
+
+  <form id="form">
+    <fieldset>
+      <legend>Feedback Form</legend>
+
+      <label for="username">Name:</label><br />
+      <input type="text" id="username" name="username" /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="text" id="email" name="email" /><br /><br />
+
+      <label for="session-date">Date of session:</label><br />
+      <input type="date" id="session-date" name="session-date" /><br /><br />
+
+      <p>How would you rate this meeting?</p>
+      <input type="radio" id="good" name="rating" value="Good" />
+      <label for="good">Good</label><br />
+      <input type="radio" id="okay" name="rating" value="Okay" />
+      <label for="okay">Okay</label><br />
+      <input type="radio" id="bad" name="rating" value="Bad" />
+      <label for="bad">Bad</label><br /><br />
+
+      <label for="comment">Any suggestions?</label><br />
+      <textarea id="comment" name="comment" rows="4" cols="40"></textarea><br /><br />
+
+      <label for="meeting-type">Choose type of meeting:</label>
+      <select id="meeting-type" name="meeting-type">
+        <option value="brainstorm">Brainstorm</option>
+        <option value="sprint">Sprint Planning</option>
+        <option value="retro">Retrospective</option>
+      </select><br /><br />
+
+      <label for="tools">Tools discussed:</label><br />
+      <input list="tools" name="tools" id="tool-choice">
+      <datalist id="tools">
+        <option value="Figma">
+        <option value="Miro">
+        <option value="GitHub">
+      </datalist><br /><br />
+
+      <input type="checkbox" id="followup" name="followup" />
+      <label for="followup">Send follow-up email</label><br /><br />
+
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+</body>
+</html>
