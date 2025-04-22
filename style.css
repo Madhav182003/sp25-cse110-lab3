@@ -1,0 +1,15 @@
+/* ================================
+   Issue 1: Setup & Variables
+   ================================ */
+   :root {
+    /* primary palette */
+    --primary: #3498db;
+    /* accent color */
+    --accent: #2ecc71;
+    /* fallback example */
+    --alert: var(--missing, orange);
+  }
+  /* overall comments */
+  * {
+    box-sizing: border-box;
+  }
