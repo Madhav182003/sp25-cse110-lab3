@@ -13,3 +13,21 @@
   * {
     box-sizing: border-box;
   }
+  
+  /* ================================
+     Issue 2: Coloring & Backgrounds
+     ================================ */
+  body {
+    background: var(--primary);
+    color: rgb(34,34,34);
+    font-family: 'Roboto', sans-serif; /* preload in HTML */
+  }
+  h1, h2 {
+    color: hsl(200, 80%, 40%);
+  }
+  nav a {
+    color: #fff;
+    background: color-mix(in srgb, var(--accent) 70%, white);
+    padding: 0.5em;
+  }
+  
