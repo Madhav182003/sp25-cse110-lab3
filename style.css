@@ -30,4 +30,29 @@
     background: color-mix(in srgb, var(--accent) 70%, white);
     padding: 0.5em;
   }
-  
+
+  /* ================================
+   Issue 3: Spacing & Box Model
+   ================================ */
+/* relative units */
+main {
+    margin: 2rem auto;   /* rem */
+    padding: 5%;         /* % */
+    max-width: 60ch;
+  }
+  /* absolute units */
+  img {
+    width: 400px;
+    max-width: 50vw;     /* viewport */
+    height: auto;
+  }
+  /* box model */
+  section {
+    margin: 1rem 0;               /* shorthand */
+    padding-top: 1rem;            /* longhand */
+    padding: 0.5rem;              /* shorthand override */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #888;
+    border-radius: 0.5rem;
+  }
