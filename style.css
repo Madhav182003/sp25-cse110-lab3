@@ -1,58 +1,138 @@
 /* ================================
    Issue 1: Setup & Variables
    ================================ */
-   :root {
-    /* primary palette */
-    --primary: #3498db;
-    /* accent color */
-    --accent: #2ecc71;
-    /* fallback example */
-    --alert: var(--missing, orange);
-  }
-  /* overall comments */
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* ================================
+:root {
+  /* primary palette */
+  --primary: #3498db;
+  /* accent color */
+  --accent: #2ecc71;
+  /* fallback example */
+  --alert: var(--missing, orange);
+}
+/* overall comments */
+* {
+  box-sizing: border-box;
+}
+
+/* ================================
      Issue 2: Coloring & Backgrounds
      ================================ */
-  body {
-    background: var(--primary);
-    color: rgb(34,34,34);
-    font-family: 'Roboto', sans-serif; /* preload in HTML */
-  }
-  h1, h2 {
-    color: hsl(200, 80%, 40%);
-  }
-  nav a {
-    color: #fff;
-    background: color-mix(in srgb, var(--accent) 70%, white);
-    padding: 0.5em;
-  }
+body {
+  background: var(--primary);
+  color: rgb(34, 34, 34);
+  font-family: "Roboto", sans-serif; /* preload in HTML */
+}
+h1,
+h2 {
+  color: hsl(200, 80%, 40%);
+}
+nav a {
+  color: #fff;
+  background: color-mix(in srgb, var(--accent) 70%, white);
+  padding: 0.5em;
+}
 
-  /* ================================
+/* ================================
    Issue 3: Spacing & Box Model
    ================================ */
 /* relative units */
 main {
-    margin: 2rem auto;   /* rem */
-    padding: 5%;         /* % */
-    max-width: 60ch;
-  }
-  /* absolute units */
-  img {
-    width: 400px;
-    max-width: 50vw;     /* viewport */
-    height: auto;
-  }
-  /* box model */
-  section {
-    margin: 1rem 0;               /* shorthand */
-    padding-top: 1rem;            /* longhand */
-    padding: 0.5rem;              /* shorthand override */
-    border-style: solid;
-    border-width: 2px;
-    border-color: #888;
-    border-radius: 0.5rem;
-  }
+  margin: 2rem auto; /* rem */
+  padding: 5%; /* % */
+  max-width: 60ch;
+}
+/* absolute units */
+img {
+  width: 400px;
+  max-width: 50vw; /* viewport */
+  height: auto;
+}
+/* box model */
+section {
+  margin: 1rem 0; /* shorthand */
+  padding-top: 1rem; /* longhand */
+  padding: 0.5rem; /* shorthand override */
+  border-style: solid;
+  border-width: 2px;
+  border-color: #888;
+  border-radius: 0.5rem;
+}
+
+/* ================================
+   Issue 4: Typography & Layout
+   ================================ */
+/* text styling */
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+p,
+li {
+  line-height: 1.5;
+}
+/* display modes */
+nav ul {
+  display: flex;
+}
+nav li {
+  display: inline-block;
+}
+/* flex container */
+nav ul {
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+/* grid container */
+form fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+.classExample {
+  color: crimson;
+  font-weight: bold;
+}
+
+/* ID selector */
+#idExample {
+  background-color: lightblue;
+  padding: 0.5rem;
+}
+
+/* Attribute selector */
+[attr="value"] {
+  border: 2px dashed gray;
+}
+
+/* Selector list */
+h1,
+h2 {
+  margin-bottom: 0.75rem;
+}
+
+/* Child combinator */
+section > h3 {
+  text-transform: uppercase;
+}
+
+/* Descendant combinator */
+div span {
+  font-style: italic;
+}
+
+/* Adjacent sibling combinator */
+li + li {
+  margin-top: 0.5rem;
+}
+
+/* General sibling combinator */
+li ~ li {
+  color: #555;
+}
+
+/* Combining selectors */
+p.highlight {
+  background-color: yellow;
+  padding: 0.25rem;
+}
