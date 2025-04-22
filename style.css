@@ -27,9 +27,10 @@ h2 {
   color: hsl(200, 80%, 40%);
 }
 nav a {
-  color: #fff;
-  background: color-mix(in srgb, var(--accent) 70%, white);
-  padding: 0.5em;
+    color: #ffffff;            /* white text */
+    background-color: #c0f0d4; /* approx. 70% white mixed with your --accent (#2ecc71) */
+    padding: 0.5em;
+    text-decoration: none;
 }
 
 /* ================================
