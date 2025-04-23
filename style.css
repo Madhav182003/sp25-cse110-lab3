@@ -1,150 +1,236 @@
 /* ================================
-   Issue 1: Setup & Variables
+   Issue 1: Setup & Variables
    ================================ */
-:root {
-  /* primary palette */
-  --primary: #3498db;
-  /* accent color */
-  --accent: #2ecc71;
-  /* fallback example */
-  --alert: var(--missing, orange);
-}
-/* overall comments */
-* {
-  box-sizing: border-box;
-}
-
-/* ================================
-     Issue 2: Coloring & Backgrounds
+   :root {
+    /* primary palette */
+    --primary: #9ed8ff;
+    /* accent color */
+    --accent: #2ecc71;
+    /* fallback example */
+    --alert: var(--missing, orange);
+  }
+  
+  /* overall comments */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* ================================
+     Issue 2: Coloring & Backgrounds
      ================================ */
-body {
-  background: var(--primary);
-  color: rgb(34, 34, 34);
-  font-family: "Roboto", sans-serif; /* preload in HTML */
-}
-h1,
-h2 {
-  color: hsl(200, 80%, 40%);
-}
-nav a {
-    color: #ffffff;            /* white text */
-    background-color: #c0f0d4; /* approx. 70% white mixed with your --accent (#2ecc71) */
+  body {
+    background: var(--primary);
+    color: rgb(34, 34, 34);
+    font-family: "Roboto", sans-serif; /* preload in HTML */
+  }
+  
+  h1,
+  h2 {
+    color: hsl(200, 80%, 40%);
+  }
+  
+  nav a {
+    color: #ffffff;             /* white text */
+    background-color: #c0f0d4;  /* approx. 70% white mixed with --accent */
     padding: 0.5em;
     text-decoration: none;
-}
-
-/* ================================
-   Issue 3: Spacing & Box Model
-   ================================ */
-/* relative units */
-main {
-  margin: 2rem auto; /* rem */
-  padding: 5%; /* % */
-  max-width: 60ch;
-}
-/* absolute units */
-img {
-  width: 400px;
-  max-width: 50vw; /* viewport */
-  height: auto;
-}
-/* box model */
-section {
-  margin: 1rem 0; /* shorthand */
-  padding-top: 1rem; /* longhand */
-  padding: 0.5rem; /* shorthand override */
-  border-style: solid;
-  border-width: 2px;
-  border-color: #888;
-  border-radius: 0.5rem;
-}
-
-/* ================================
-   Issue 4: Typography & Layout
-   ================================ */
-/* text styling */
-h1 {
-  text-align: center;
-  text-decoration: underline;
-}
-p,
-li {
-  line-height: 1.5;
-}
-/* display modes */
-nav ul {
-  display: flex;
-}
-nav li {
-  display: inline-block;
-}
-/* flex container */
-nav ul {
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-/* grid container */
-form fieldset {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-}
-.classExample {
-  color: crimson;
-  font-weight: bold;
-}
-
-/* ID selector */
-#idExample {
-  background-color: lightblue;
-  padding: 0.5rem;
-}
-
-/* Attribute selector */
-[attr="value"] {
-  border: 2px dashed gray;
-}
-
-/* Selector list */
-h1,
-h2 {
-  margin-bottom: 0.75rem;
-}
-
-/* Child combinator */
-section > h3 {
-  text-transform: uppercase;
-}
-
-/* Descendant combinator */
-div span {
-  font-style: italic;
-}
-
-/* Adjacent sibling combinator */
-li + li {
-  margin-top: 0.5rem;
-}
-
-/* General sibling combinator */
-li ~ li {
-  color: #555;
-}
-
-/* Combining selectors */
-p.highlight {
-  background-color: yellow;
-  padding: 0.25rem;
-}
-/* ================================
-   Issue 5: Interaction & Responsiveness
-   ================================ */
-/* pseudo‑classes */
-a:hover { opacity: 0.8; }
-button:active { transform: scale(0.98); }
-/* media query */
-@media (max-width: 600px) {
-  nav ul { flex-direction: column; }
-  form fieldset { grid-template-columns: 1fr; }
-}
+  }
+  
+  /* ================================
+     Issue 3: Spacing & Box Model
+     ================================ */
+  main {
+    margin: 2rem auto;  /* rem */
+    padding: 5%;        /* % */
+    max-width: 60ch;
+  }
+  
+  img {
+    width: 370px;
+    max-width: 50vw;    /* viewport */
+    height: auto;
+  }
+  
+  section {
+    margin: 1rem 0;          /* shorthand */
+    padding-top: 1rem;       /* longhand */
+    padding: 0.5rem;         /* shorthand override */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #888;
+    border-radius: 0.5rem;
+  }
+  
+  /* ================================
+     Issue 4: Typography & Layout
+     ================================ */
+  /* text styling */
+  h1 {
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  p,
+  li {
+    line-height: 1.5;
+  }
+  
+  /* display modes & layout */
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  form fieldset {
+    /* we’ll override this below for the form */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  
+  /* Selector demos */
+  /* Class selector */
+  .classExample {
+    color: crimson;
+    font-weight: bold;
+  }
+  
+  /* ID selector */
+  #idExample {
+    background-color: lightblue;
+    padding: 0.5rem;
+  }
+  
+  /* Attribute selector */
+  [attr="value"] {
+    border: 2px dashed gray;
+  }
+  
+  /* Selector list */
+  h1,
+  h2 {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Child combinator */
+  section > h3 {
+    text-transform: uppercase;
+  }
+  
+  /* Descendant combinator */
+  div span {
+    font-style: italic;
+  }
+  
+  /* Adjacent sibling combinator */
+  li + li {
+    margin-top: 0.5rem;
+  }
+  
+  /* General sibling combinator */
+  li ~ li {
+    color: #555;
+  }
+  
+  /* Combining selectors */
+  p.highlight {
+    background-color: yellow;
+    padding: 0.25rem;
+  }
+  
+  /* ================================
+     Issue 5: Interaction & Responsiveness
+     ================================ */
+  /* pseudo-classes */
+  a:hover {
+    opacity: 0.8;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  /* media query */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+    }
+    form fieldset {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ================================
+     Fix Form Control Positioning
+     ================================ */
+  /* turn off the grid for the form and use normal flow */
+  #form fieldset {
+    display: block;
+    margin: 2rem 0;
+    padding: 1rem;
+  }
+  
+  /* hide all manual <br> tags in the form */
+  #form br {
+    display: none;
+  }
+  
+  /* labels and paragraphs stack vertically */
+  #form label,
+  #form p {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* text inputs, date, select, textarea full‐width blocks */
+  #form input[type="text"],
+  #form input[type="date"],
+  #form select,
+  #form textarea {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  /* rating radios inline with their labels */
+  #form input[type="radio"],
+  #form label[for="good"],
+  #form label[for="okay"],
+  #form label[for="bad"] {
+    display: inline-block;
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+  
+  /* tools dropdown + follow-up checkbox inline */
+  #form label[for="tools"],
+  #tools,
+  #followup,
+  #form label[for="followup"] {
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+  
+  /* Submit button on its own line */
+  #form button[type="submit"] {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: var(--accent);
+    color: white;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
